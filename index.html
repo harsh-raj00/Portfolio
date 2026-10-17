@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harsh Raj — Data Science &amp; AI | IIIT Dharwad</title>
+  <meta name="description"
+    content="Portfolio of Harsh Raj, Data Science & Artificial Intelligence student at Indian Institute of Information Technology (IIIT) Dharwad. Creator of ChefMind AI, J.A.R.V.I.S., and DeepfakeGuard.">
+  <meta name="keywords"
+    content="Harsh Raj, IIIT Dharwad, Indian Institute of Information Technology Dharwad, Data Science, Artificial Intelligence, Full Stack AI Developer, ChefMind AI, DeepfakeGuard, Cybersecurity">
+  <meta name="author" content="Harsh Raj">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harsh Raj — Full-Stack AI Engineer &amp; Systems Architect">
+  <meta property="og:description"
+    content="Engineering high-throughput multimodal AI pipelines, 3D WebGL interfaces, and resilient distributed systems.">
+  <meta property="og:image" content="assets/images/chefmind-banner.jpg">
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Harsh Raj — Full-Stack AI Engineer">
+  <meta name="twitter:description"
+    content="Engineering high-throughput multimodal AI pipelines, 3D WebGL interfaces, and resilient distributed systems.">
+  <meta name="twitter:image" content="assets/images/chefmind-banner.jpg">
+
+  <!-- Google Fonts: Syne, Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress Hairline -->
+  <div class="scroll-progress-bar" id="scroll-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+    aria-label="Reading progress"></div>
+
+  <!-- Background Architectural Grid & Ambient Mouse Follower -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Custom Cursor (Desktop) -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notice" id="toast-notice" role="alert" aria-live="polite"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="brand-logo" aria-label="Harsh Raj Home">
+        <span class="brand-monogram">HR</span>
+        <span>HARSH RAJ</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#architecture" class="nav-link">Architecture</a>
+        <a href="#hologram-lab" class="nav-link">3D Lab</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Audio Haptic Equalizer Toggle -->
+        <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle Synthesized Audio FX">
+          <div class="eq-bars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span class="audio-label">Audio: OFF</span>
+        </button>
+
+        <!-- Command Palette Trigger -->
+        <button class="cmd-k-btn" id="cmd-k-trigger" aria-label="Open Interactive Terminal Command Prompt">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"></polyline>
+            <line x1="12" y1="19" x2="20" y2="19"></line>
+          </svg>
+          <span>CLI</span>
+          <span class="cmd-k-badge">⌘K</span>
+        </button>
+
+        <!-- Monochromatic Theme Switcher -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Light/Dark Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Drawer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav" id="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="#work" class="mobile-nav-link">Selected Work</a>
+    <a href="#architecture" class="mobile-nav-link">Architecture Simulator</a>
+    <a href="#hologram-lab" class="mobile-nav-link">3D Hologram Lab</a>
+    <a href="#capabilities" class="mobile-nav-link">Capabilities Matrix</a>
+    <a href="#terminal" class="mobile-nav-link">CLI Command Center</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#contact" class="mobile-nav-link">Initiate Contact</a>
+    <a href="#" class="mobile-nav-link open-resume-btn">Curriculum Vitae (PDF)</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <!-- <span class="badge"> -->
+              <span class="status-dot"></span>
+              <!-- <span>AVAILABLE FOR HIGH-IMPACT ROLES &amp; AI ARCHITECTURE</span> -->
+              <!-- </span> -->
+            </div>
+
+            <h1 class="hero-title">
+              HARSH RAJ<br>
+              <!-- <span class="highlight">ARCHITECTING</span><br>
+              INTELLIGENT SYSTEMS -->
+            </h1>
+
+            <div
+              style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-primary); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+              <span style="color: var(--text-muted);">&gt;</span>
+              <span id="typewriter-text" class="typewriter-cursor">Full-Stack AI Engineer</span>
+            </div>
+
+            <!-- <p class="hero-subtitle">
+              Creator of <strong>ChefMind AI</strong>, <strong>J.A.R.V.I.S.</strong>, and <strong>DeepfakeGuard</strong>. 
+              Engineering high-throughput multimodal AI pipelines, 8K-particle WebGL spatial environments, 
+              and sub-millisecond cloud backbones.
+            </p> -->
+
+
+            <!-- <div class="hero-ctas">
+              <a href="#work" class="btn btn-primary" id="hero-btn-work">
+                <span>Explore Creations</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+
+              <a href="#architecture" class="btn btn-secondary" id="hero-btn-arch">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Live Pipeline Sim</span>
+              </a>
+
+              <a href="#terminal" class="btn btn-secondary" id="hero-btn-terminal">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <span>CLI Terminal</span>
+              </a>
+
+              <a href="#" class="btn btn-outline open-resume-btn" id="hero-btn-resume">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Curriculum Vitae</span>
+              </a>
+            </div> -->
+
+            <!-- Stats Bar -->
+            <!-- <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-value">500 t/s</span>
+                <span class="stat-label">Groq AI Inference</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">8,000</span>
+                <span class="stat-label">WebGL Hologram Nodes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">98.68%</span>
+                <span class="stat-label">MesoNet Precision</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">99.98%</span>
+                <span class="stat-label">Multi-Engine SLA</span>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MONOCHROME TICKER (ENGINEERING STACK & REAL PROJECTS)
+         ========================================================================== -->
+    <!-- <div class="ticker-section" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-item"><span>CHEFMIND AI (GROQ 500 T/S)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>J.A.R.V.I.S. (THREE.JS 8K PARTICLE HUD)</span><span class="ticker-dot">•</span>
+        </div>
+        <div class="ticker-item"><span>DEEPFAKEGUARD (4-LAYER BIOMETRIC VISION)</span><span class="ticker-dot">•</span>
+        </div>
+        <div class="ticker-item"><span>BOOKBRIDGE (FASTAPI + DOCKER)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>LIVSPACEONE (SOCKET.IO CONCIERGE)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>ETHSECURE HEALTH (SOLIDITY + IPFS)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>TYPESCRIPT &amp; REACT 19</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>PYTHON &amp; FASTAPI</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>GEMINI 1.5 FLASH VISION</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>GO &amp; DISTRIBUTED RUNTIMES</span><span class="ticker-dot">•</span></div>
+        Duplicate for loop
+        
+        
+        <div class="ticker-item"><span>CHEFMIND AI (GROQ 500 T/S)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>J.A.R.V.I.S. (THREE.JS 8K PARTICLE HUD)</span><span class="ticker-dot">•</span>
+        </div>
+        <div class="ticker-item"><span>DEEPFAKEGUARD (4-LAYER BIOMETRIC VISION)</span><span class="ticker-dot">•</span>
+        </div>
+        <div class="ticker-item"><span>BOOKBRIDGE (FASTAPI + DOCKER)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>LIVSPACEONE (SOCKET.IO CONCIERGE)</span><span class="ticker-dot">•</span></div>
+        <div class="ticker-item"><span>ETHSECURE HEALTH (SOLIDITY + IPFS)</span><span class="ticker-dot">•</span></div>
+      </div>
+    </div> -->
+
+    <!-- ==========================================================================
+         SELECTED WORK / VERIFIED PROJECTS SHOWCASE
+         ========================================================================== -->
+    <section id="work">
+      <div class="container">
+        <div class="hero-ctas">
+          <a href="#work" class="btn btn-primary" id="hero-btn-work">
+            <span>Explore Creations</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+
+          <a href="#architecture" class="btn btn-secondary" id="hero-btn-arch">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Live Pipeline Sim</span>
+          </a>
+
+          <a href="#terminal" class="btn btn-secondary" id="hero-btn-terminal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span>CLI Terminal</span>
+          </a>
+
+          <a href="#" class="btn btn-outline open-resume-btn" id="hero-btn-resume">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Curriculum Vitae</span>
+          </a>
+        </div>
+        <div class="section-header">
+          <!-- <span class="section-label">// VERIFIED PRODUCTION ARCHIVES</span> -->
+          <h2 class="section-title">ENGINEERED FOR SCALE</h2>
+          <p class="section-desc">
+            Production systems, artificial intelligence backbones, and 3D sensory web software
+            built with zero bloat and deployed across modern cloud infrastructure.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="project-filters" role="tablist" aria-label="Project Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Systems [06]</button>
+          <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI &amp; Machine
+            Learning</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full-Stack
+            Platforms</button>
+          <button class="filter-btn" data-filter="web3" role="tab" aria-selected="false">Web3 &amp; Security</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: ChefMind AI (Flagship) -->
+          <article class="project-card featured tilt-card" data-category="ai" id="project-card-chefmind">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">FLAGSHIP AI CO-PILOT</span>
+              <img src="assets/images/chefmind-banner.jpg" alt="ChefMind AI culinary intelligence platform banner"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">01 // PROD-01</span>
+                  <span class="project-category">Multimodal AI / Full-Stack</span>
+                </div>
+                <h3 class="project-title">ChefMind AI — Multimodal Culinary Intelligence</h3>
+                <p class="project-desc">
+                  Transforms pantry ingredients into gourmet recipes via Gemini Vision camera scanning,
+                  Web Speech dictation, and a resilient dual-engine cascade pairing Groq Cloud (500 tokens/sec)
+                  with Google Gemini Flash failover. Includes authentic English &amp; Devanagari Hindi generation.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                  <span>500 Tokens/sec • &lt;120ms Failover • React 19 + Groq</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">React 19</span>
+                  <span class="tech-tag">Groq Cloud</span>
+                  <span class="tech-tag">Gemini API</span>
+                  <span class="tech-tag">Node.js 20</span>
+                  <span class="tech-tag">Express.js</span>
+                  <span class="tech-tag">MongoDB Atlas</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="chefmind-ai"
+                  aria-label="Inspect ChefMind AI architecture">
+                  <span>Inspect Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <a href="https://chef-mind-ai.vercel.app" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">
+                  <span>Live App</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/ChefMind-AI" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: J.A.R.V.I.S. (Featured AI & 3D) -->
+          <article class="project-card featured tilt-card" data-category="ai" id="project-card-jarvis">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">CINEMATIC 3D WEBGL</span>
+              <img src="assets/images/project-jarvis.jpg" alt="JARVIS futuristic Iron Man holographic HUD"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">02 // PROD-02</span>
+                  <span class="project-category">AI / 3D Spatial WebGL</span>
+                </div>
+                <h3 class="project-title">J.A.R.V.I.S. — Holographic AI Assistant</h3>
+                <p class="project-desc">
+                  Cinematic Iron Man assistant featuring an 8,000 particle 3D holographic sphere rendered with custom
+                  GLSL shaders, Siri-like voice orb, duplex WebSockets, and ElevenLabs speech synthesis paired with
+                  Google Gemini cognitive tools.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                  <span>8K GLSL Particles • 60 FPS WebGL • 5 Auto Plugins</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Three.js</span>
+                  <span class="tech-tag">GLSL</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">Gemini API</span>
+                  <span class="tech-tag">WebSockets</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-primary btn-sm open-case-study-btn" data-project="jarvis"
+                  aria-label="Inspect JARVIS architecture">
+                  <span>Inspect Architecture</span>
+                </button>
+                <a href="https://jarvis-frontend-uj30.onrender.com" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-secondary btn-sm">
+                  <span>Live App</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/my-jarvis" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: DeepfakeGuard -->
+          <article class="project-card tilt-card" data-category="ai" id="project-card-deepfake">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">COMPUTER VISION</span>
+              <img src="assets/images/project-deepfakeguard.jpg" alt="DeepfakeGuard facial biometric security scan"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">03 // PROD-03</span>
+                  <span class="project-category">AI / Computer Vision</span>
+                </div>
+                <h3 class="project-title">DeepfakeGuard — Biometric Security</h3>
+                <p class="project-desc">
+                  Multi-layered biometric authentication uniting real-time SSD+ResNet face detection, 128-D vector
+                  recognition,
+                  EAR liveness detection, and MesoNet CNN deepfake classification with Grad-CAM explainability.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>96% Accuracy • 98.68% Precision • 14.8ms/frame</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">MediaPipe</span>
+                  <span class="tech-tag">MesoNet</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-secondary btn-sm open-case-study-btn" data-project="deepfakeguard">
+                  <span>Breakdown</span>
+                </button>
+                <a href="https://deepfakeguard-3ufd.onrender.com" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Live</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/DeepfakeGuard" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: BookBridge -->
+          <article class="project-card tilt-card" data-category="fullstack" id="project-card-bookbridge">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">FULL-STACK CLOUD</span>
+              <img src="assets/images/project-fintech-core.jpg" alt="BookBridge academic marketplace platform"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">04 // PROD-04</span>
+                  <span class="project-category">Full-Stack Platform</span>
+                </div>
+                <h3 class="project-title">BookBridge — Academic Marketplace &amp; Vault</h3>
+                <p class="project-desc">
+                  College academic exchange where students buy, sell, and access verified lecture notes,
+                  assignments, and study materials across 9 disciplines. Dockerized on Render with Python FastAPI.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>FastAPI + Docker • 9 Categories • JWT Auth</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">SQLAlchemy</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">SQLite</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-secondary btn-sm open-case-study-btn" data-project="bookbridge">
+                  <span>Breakdown</span>
+                </button>
+                <a href="https://bookbridge-xh39.onrender.com" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Live</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/BookBridge" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: LivspaceOne -->
+          <article class="project-card tilt-card" data-category="fullstack" id="project-card-livspace">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">E-COMMERCE &amp; DESIGN</span>
+              <img src="assets/images/project-monolith-studio.jpg" alt="LivspaceOne architectural platform"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">05 // PROD-05</span>
+                  <span class="project-category">Full-Stack / E-Commerce</span>
+                </div>
+                <h3 class="project-title">LivspaceOne — Luxury Architecture Marketplace</h3>
+                <p class="project-desc">
+                  Dual-system architectural platform uniting LuxeBuild Mart (e-commerce for luxury materials)
+                  and Design Studio (expert hiring &amp; tracking). Features Socket.io concierge and custom bento grid
+                  workflow panels.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  </svg>
+                  <span>Dual System • Real-Time Socket.io • CMS Panel</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express.js</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">Socket.io</span>
+                  <span class="tech-tag">JWT</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-secondary btn-sm open-case-study-btn" data-project="livspaceone">
+                  <span>Breakdown</span>
+                </button>
+                <a href="https://livspaceone.onrender.com" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Live</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/livspaceone" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: EthSecure Health -->
+          <article class="project-card tilt-card" data-category="web3" id="project-card-ethsecure">
+            <div class="project-card-image-wrap">
+              <span class="project-overlay-badge">BLOCKCHAIN &amp; IPFS</span>
+              <img src="assets/images/project-ai-nexus.jpg" alt="EthSecure decentralized health blockchain"
+                class="project-card-image" loading="lazy">
+            </div>
+            <div class="project-card-content">
+              <div>
+                <div class="project-meta-row">
+                  <span class="project-index">06 // PROD-06</span>
+                  <span class="project-category">Blockchain / Web3</span>
+                </div>
+                <h3 class="project-title">EthSecure Health — Decentralized Health Records</h3>
+                <p class="project-desc">
+                  Ethereum blockchain EHR architecture integrating IPFS decentralized storage, client-side AES-256
+                  file encryption, and OpenZeppelin role-based smart contracts for patient sovereignty.
+                </p>
+                <div class="project-metric-pill">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>Solidity 0.8 • Client AES-256 • IPFS Pinata</span>
+                </div>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Solidity</span>
+                  <span class="tech-tag">React 19</span>
+                  <span class="tech-tag">ethers.js</span>
+                  <span class="tech-tag">IPFS</span>
+                  <span class="tech-tag">Hardhat</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <button class="btn btn-secondary btn-sm open-case-study-btn" data-project="ethsecure">
+                  <span>Breakdown</span>
+                </button>
+                <a href="https://ethsecure-health.onrender.com" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Live</span>
+                </a>
+                <a href="https://github.com/harsh-raj00/EthSecure-Health-" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <span>Source</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE SYSTEM ARCHITECTURE PIPELINE SIMULATOR
+         ========================================================================== -->
+    <section class="architecture-section" id="architecture">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// LIVE ARCHITECTURAL BENCHMARK</span>
+          <h2 class="section-title">SYSTEM PIPELINE SIMULATOR</h2>
+          <p class="section-desc">
+            Interactively explore the data flow, circuit breakers, and latency bottlenecks
+            engineered into Harsh's key production systems.
+          </p>
+        </div>
+
+        <div class="arch-nav-tabs">
+          <button class="arch-nav-btn active" data-arch="chefmind">ChefMind AI Dual-Engine</button>
+          <button class="arch-nav-btn" data-arch="jarvis">J.A.R.V.I.S. 8K Multimodal HUD</button>
+          <button class="arch-nav-btn" data-arch="deepfake">DeepfakeGuard 4-Layer Security</button>
+        </div>
+
+        <div class="arch-pipeline-card">
+          <div class="arch-pipeline-header">
+            <div>
+              <h3 id="arch-pipeline-title"
+                style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 700;">
+                ChefMind AI — Dual-Engine Cascade Architecture
+              </h3>
+              <p id="arch-pipeline-sub" style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 4px;">
+                Groq Cloud (500 tokens/s) paired with Gemini Flash failover and multimodal vision
+              </p>
+            </div>
+            <button class="btn btn-primary btn-sm" id="arch-simulate-btn">
+              <span>Transmit Pipeline Packet</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Real-Time Architecture Telemetry HUD -->
+          <div class="arch-telemetry-hud" id="arch-telemetry-hud">
+            <div class="arch-hud-item">
+              <span class="arch-hud-label">// ENGINE STATE</span>
+              <span class="arch-hud-val" id="arch-hud-status">STANDBY // READY</span>
+            </div>
+            <div class="arch-hud-item">
+              <span class="arch-hud-label">// STREAM LATENCY</span>
+              <span class="arch-hud-val" id="arch-hud-latency">0.00 ms</span>
+            </div>
+            <div class="arch-hud-item">
+              <span class="arch-hud-label">// ACTIVE PIPELINE HOP</span>
+              <span class="arch-hud-val" id="arch-hud-hop">HOP 00 / 05</span>
+            </div>
+            <div class="arch-hud-item">
+              <span class="arch-hud-label">// INTEGRITY SLA</span>
+              <span class="arch-hud-val" id="arch-hud-integrity">100.0% VERIFIED</span>
+            </div>
+          </div>
+
+          <!-- Animated SVG Circuit Conduit & Beam Track -->
+          <div class="arch-circuit-track-container" id="arch-circuit-container">
+            <svg class="arch-circuit-svg" id="arch-circuit-svg" width="100%" height="28" viewBox="0 0 1000 28" preserveAspectRatio="none">
+              <line x1="40" y1="14" x2="960" y2="14" class="arch-circuit-bg-line" />
+              <line x1="40" y1="14" x2="40" y2="14" class="arch-circuit-progress-line" id="arch-circuit-progress-line" />
+              <!-- 5 Hop Connector Nodes -->
+              <circle cx="100" cy="14" r="6" class="arch-circuit-node" data-node="0" />
+              <circle cx="300" cy="14" r="6" class="arch-circuit-node" data-node="1" />
+              <circle cx="500" cy="14" r="6" class="arch-circuit-node" data-node="2" />
+              <circle cx="700" cy="14" r="6" class="arch-circuit-node" data-node="3" />
+              <circle cx="900" cy="14" r="6" class="arch-circuit-node" data-node="4" />
+              <!-- Traveling Photon Beam Packet -->
+              <circle cx="40" cy="14" r="7" class="arch-packet-beam" id="arch-packet-beam" />
+            </svg>
+          </div>
+
+          <!-- 5-Step Pipeline Grid -->
+          <div class="arch-steps-grid" id="arch-steps-container">
+            <!-- Dynamically populated via architecture.js -->
+          </div>
+
+          <!-- Real-time Packet Telemetry Log Box -->
+          <div class="arch-log-wrapper">
+            <div class="arch-log-header">
+              <span class="arch-log-title">// LIVE TELEMETRY CONSOLE STREAM</span>
+              <span class="arch-log-meta" id="arch-log-meta">STREAM: READY</span>
+            </div>
+            <div class="arch-log-box" id="arch-log-output">
+              <span style="color: #71717a;">System ready. Click "Transmit Pipeline Packet" to simulate live data flow.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3D HOLOGRAPHIC PARTICLE SPHERE LAB
+         ========================================================================== -->
+    <section class="hologram-lab-section" id="hologram-lab">
+      <div class="container">
+        <div class="hologram-grid">
+          <div>
+            <span class="section-label">// EXPERIMENTAL SPATIAL LAB</span>
+            <h2 class="section-title">3D HOLOGRAPHIC ENGINE</h2>
+            <p class="section-desc" style="margin-bottom: 24px;">
+              An in-browser 3D canvas math projection replicating the holographic core of <strong>J.A.R.V.I.S.</strong>
+              Features real-time perspective matrix transformations, 650+ active particles, and mouse inertia drag.
+            </p>
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); line-height: 1.8;">
+              <div>• Projection: 3D Fibonacci Spatial Matrix</div>
+              <div>• Refresh Rate: 60 FPS compositor thread</div>
+              <div>• Interaction: Click and drag to pitch &amp; yaw</div>
+            </div>
+          </div>
+
+          <!-- Hologram 3D Canvas Box -->
+          <div class="hologram-card">
+            <div class="hologram-hud-top">
+              <span id="holo-hud-title">ARC-REACTOR // 3D FIBONACCI SPHERE</span>
+              <span id="holo-hud-fps">RENDER: 60 FPS</span>
+            </div>
+            <div class="hologram-canvas-wrap">
+              <canvas id="hologram-canvas" class="hologram-canvas"></canvas>
+            </div>
+            <div class="holo-modes-bar">
+              <button class="holo-mode-btn active" data-mode="sphere">JARVIS 3D Sphere</button>
+              <button class="holo-mode-btn" data-mode="neural">Neural Network</button>
+              <button class="holo-mode-btn" data-mode="vortex">Vortex Galaxy</button>
+              <button class="holo-mode-btn" data-mode="wave">Cyber Wave</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TECHNICAL CAPABILITIES & BENTO GRID
+         ========================================================================== -->
+    <section id="capabilities">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// COMPETENCIES &amp; INFRASTRUCTURE</span>
+          <h2 class="section-title">TECHNICAL ARCHITECTURE</h2>
+          <p class="section-desc">
+            Multidisciplinary engineering prowess refined across artificial intelligence inference,
+            3D spatial computing, cloud containers, and low-latency APIs.
+          </p>
+        </div>
+
+        <!-- Bento Grid Layout -->
+        <div class="bento-grid">
+
+          <!-- Bento 1: AI & ML Engine (Large) -->
+          <div class="skill-category-card bento-card-lg tilt-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <div class="skill-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <span class="badge">AI &amp; MACHINE LEARNING</span>
+            </div>
+            <h3 class="skill-category-title" style="font-size: 1.45rem;">Multimodal AI &amp; Inference Optimization</h3>
+            <p class="skill-category-desc">
+              Specialized in production LLM pipelines, retrieval-augmented generation (RAG), multimodal computer vision, Groq Cloud ultra-fast inference (500
+              t/s), Gemini Vision integration, and convolutional neural network anti-spoofing algorithms.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+              <span class="tech-tag">RAG (Retrieval-Augmented Gen)</span>
+              <span class="tech-tag">Groq Cloud (500 t/s)</span>
+              <span class="tech-tag">Gemini Flash 1.5</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">OpenCV &amp; MediaPipe</span>
+              <span class="tech-tag">MesoNet CNN</span>
+              <span class="tech-tag">Web Speech API</span>
+            </div>
+          </div>
+
+          <!-- Bento 2: 3D Spatial & Frontend (Small) -->
+          <div class="skill-category-card bento-card-sm tilt-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-category-title">3D WebGL &amp; UI</h3>
+            <p class="skill-category-desc">
+              Three.js, GLSL custom shaders, 8K particle fields, Web Audio API synthesizers, and React 19
+              micro-interactions.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+              <span class="tech-tag">Three.js</span>
+              <span class="tech-tag">GLSL Shaders</span>
+              <span class="tech-tag">React 19</span>
+              <span class="tech-tag">Web Audio API</span>
+            </div>
+          </div>
+
+          <!-- Bento 3: Distributed Backend & Cloud (Small) -->
+          <div class="skill-category-card bento-card-sm tilt-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h3 class="skill-category-title">Backend Architecture</h3>
+            <p class="skill-category-desc">
+              FastAPI, Node.js 20, Go concurrency, binary WebSockets, and zero-trust authentication protocols.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto;">
+              <span class="tech-tag">Python FastAPI</span>
+              <span class="tech-tag">Node.js Express</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">Go (Golang)</span>
+            </div>
+          </div>
+
+          <!-- Bento 4: Data, Cloud & Verification (Large) -->
+          <div class="skill-category-card bento-card-lg tilt-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <div class="skill-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <span class="badge">CLOUD &amp; PERSISTENCE</span>
+            </div>
+            <h3 class="skill-category-title" style="font-size: 1.45rem;">Cloud Infrastructure &amp; High-Throughput
+              Databases</h3>
+            <p class="skill-category-desc">
+              Containerized microservices orchestration, MongoDB Atlas clustering, SQLite/PostgreSQL ORM tuning,
+              Docker containerization, Render &amp; Vercel CI/CD pipelines, and Ethereum smart contract verification.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto;">
+              <span class="tech-tag">Docker Containers</span>
+              <span class="tech-tag">MongoDB Atlas</span>
+              <span class="tech-tag">PostgreSQL &amp; SQLite</span>
+              <span class="tech-tag">Redis Cache</span>
+              <span class="tech-tag">Solidity (Ethereum)</span>
+              <span class="tech-tag">IPFS Pinata</span>
+              <span class="tech-tag">Vercel &amp; Render</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE COMMAND CENTER (CLI TERMINAL V2)
+         ========================================================================== -->
+    <section class="terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// DEVELOPER WORKBENCH</span>
+          <h2 class="section-title">INTERACTIVE COMMAND CENTER</h2>
+          <p class="section-desc">
+            Direct CLI access to Harsh's portfolio system. Run benchmarks, query system specifications via
+            <code>neofetch</code>, read project docs with <code>cat</code>, or toggle audio haptics.
+          </p>
+        </div>
+
+        <div class="terminal-wrapper" id="terminal-wrapper">
+          <div class="terminal-bar">
+            <div class="terminal-controls">
+              <span class="t-btn t-btn-close"></span>
+              <span class="t-btn t-btn-min"></span>
+              <span class="t-btn t-btn-max"></span>
+            </div>
+            <div class="terminal-title">harsh@architect-pro: ~ (zsh)</div>
+            <div class="terminal-status">ONLINE // v3.0.0</div>
+          </div>
+
+          <div class="terminal-body">
+            <div class="terminal-welcome">
+              Welcome to <strong>Harsh Raj Systems Console v3.0</strong>. Type <code>help</code>, <code>neofetch</code>,
+              or click chips below.
+            </div>
+
+            <!-- Quick Action Command Chips -->
+            <div class="terminal-quick-chips">
+              <button class="chip-btn" data-cmd="neofetch">neofetch</button>
+              <button class="chip-btn" data-cmd="experience">experience</button>
+              <button class="chip-btn" data-cmd="benchmark">benchmark</button>
+              <button class="chip-btn" data-cmd="projects">projects</button>
+              <button class="chip-btn" data-cmd="cat projects/chefmind.md">cat chefmind.md</button>
+              <button class="chip-btn" data-cmd="cat projects/jarvis.md">cat jarvis.md</button>
+              <button class="chip-btn" data-cmd="skills">skills</button>
+              <button class="chip-btn" data-cmd="sound">sound</button>
+              <button class="chip-btn" data-cmd="matrix">matrix</button>
+              <button class="chip-btn" data-cmd="contact">contact</button>
+              <button class="chip-btn" data-cmd="clear">clear</button>
+            </div>
+
+            <div class="terminal-history" id="terminal-history"></div>
+
+            <div class="terminal-input-row">
+              <span class="term-prompt">harsh@systems:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input"
+                placeholder="type 'help', 'neofetch', or 'benchmark'..." autocomplete="off" spellcheck="false"
+                aria-label="Terminal input line">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CAREER EXPERIENCE & JOURNEY
+         ========================================================================== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// CAREER TRAJECTORY &amp; IMPACT</span>
+          <h2 class="section-title">EXPERIENCE RECORD</h2>
+          <p class="section-desc">
+            A documented track record of taking technical ownership, designing low-latency architectures,
+            and shipping impactful software.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+
+          <!-- Experience 1: Head Held High Foundation -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card tilt-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">AI Intern (AI Advocacy &amp; Voice Systems)</h3>
+                  <div class="company-name">Head Held High Foundation • Remote</div>
+                </div>
+                <span class="timeline-date">MAY 2025 — AUG 2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Built <strong>production-oriented AI workflows</strong> (a domain chatbot, a full RAG pipeline and a real-time multilingual voice assistant), owning the full lifecycle from problem framing through live inference and monitoring.</li>
+                <li>Developed a <strong>retrieval-augmented generation (RAG)</strong> pipeline that grounds LLM responses in domain documents, reducing unsupported answers in the chatbot.</li>
+                <li>Designed an end-to-end real-time <strong>Language ID → ASR → LLM → TTS</strong> pipeline that detects the spoken language, transcribes it, generates responses with explicit language tagging, and speaks it back in a single real-time stream.</li>
+                <li>Experimented with and benchmarked multiple open-source LLMs (including <strong>Gemma</strong> and <strong>Qwen</strong>) for response quality across Indic languages and low-resource dialects (including <strong>Sanskrit</strong>) with multi-turn memory.</li>
+                <li>Architected edge deployment workflows with <strong>4-bit quantized LLMs (GGUF, ONNX, TensorRT)</strong> to minimize latency across production voice and chatbot deployments.</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;">
+                <span class="tech-tag">RAG Pipelines</span>
+                <span class="tech-tag">Domain Chatbots</span>
+                <span class="tech-tag">ASR → LLM → TTS</span>
+                <span class="tech-tag">Gemma &amp; Qwen</span>
+                <span class="tech-tag">Indic Languages &amp; Sanskrit</span>
+                <span class="tech-tag">4-Bit Quantization</span>
+                <span class="tech-tag">GGUF / ONNX / TensorRT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Trend Micro AMEA -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card tilt-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Cybersecurity Intern</h3>
+                  <div class="company-name">Trend Micro AMEA • Remote / Dubai</div>
+                </div>
+                <span class="timeline-date">JUN 2025 — JUL 2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Monitored security telemetry and applied anomaly detection using <strong>Trend Micro Vision One XDR</strong> to surface suspicious activity, trace root causes, and separate real threat signals from noise.</li>
+                <li>Conducted real-time event monitoring, threat triage, and root-cause tracing with telemetry review as data-quality precision to identify threat vectors.</li>
+                <li>Authored structured technical threat reports translating raw multi-source telemetry findings into clear, actionable summaries for security decision-makers.</li>
+                <li>Earned the industry-recognized <strong>Trend Micro Vision One XDR Certified Professional</strong> credential, linking practical telemetry operations directly with academic coursework in a <strong>Cybersecurity minor</strong>.</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;">
+                <span class="tech-tag">Trend Micro Vision One XDR</span>
+                <span class="tech-tag">Telemetry Monitoring</span>
+                <span class="tech-tag">Anomaly Detection</span>
+                <span class="tech-tag">Threat Triage</span>
+                <span class="tech-tag">Root-Cause Tracing</span>
+                <span class="tech-tag">XDR Certified Professional</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education: IIIT Dharwad -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="timeline-card tilt-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">B.Tech in Data Science &amp; Artificial Intelligence</h3>
+                  <div class="company-name">Indian Institute of Information Technology Dharwad • Dharwad, India</div>
+                </div>
+                <span class="timeline-date">AUG 2023 — MAY 2027</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Pursuing B.Tech in <strong>Data Science &amp; Artificial Intelligence</strong> with an academic <strong>Minor: Cyber Security</strong> at an Institute of National Importance.</li>
+                <li><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, Computer Networks, Cloud Computing, and Software Engineering.</li>
+                <li>Applied engineering: Engineered end-to-end production pipelines including ChefMind AI (dual-engine LLM inference), J.A.R.V.I.S. (8K-particle WebGL), and DeepfakeGuard (biometric anti-spoofing).</li>
+              </ul>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px;">
+                <span class="tech-tag">IIIT Dharwad</span>
+                <span class="tech-tag">Data Science &amp; AI</span>
+                <span class="tech-tag">Minor: Cyber Security</span>
+                <span class="tech-tag">DSA &amp; OOP</span>
+                <span class="tech-tag">DBMS &amp; OS</span>
+                <span class="tech-tag">Computer Networks</span>
+                <span class="tech-tag">Cloud Computing</span>
+                <span class="tech-tag">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & INITIATION (REAL WEB3FORMS DISPATCH)
+         ========================================================================== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">// DIRECT COMMS &amp; INQUIRY</span>
+          <h2 class="section-title">INITIATE COLLABORATION</h2>
+          <p class="section-desc">
+            Open to internships, full-time engineering roles, high-leverage AI projects, and systems consulting.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Details Column -->
+          <div class="contact-info-col">
+            <div>
+              <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 12px;">
+                Direct Transmission
+              </h3>
+              <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6;">
+                "Stay curious. Keep building." Reach out directly via verified email or social coordinates.
+                All inquiries receive a response within 24 hours.
+              </p>
+
+              <div class="contact-details">
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Direct Inbox</div>
+                    <div class="channel-val">
+                      <span>harsh546raj@gmail.com</span>
+                      <button class="copy-pill-btn" id="copy-email-btn" aria-label="Copy email address">Copy</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Location Base</div>
+                    <div class="channel-val">Bengaluru, India (Open to Global Remote)</div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">GitHub Account</div>
+                    <div class="channel-val">
+                      <a href="https://github.com/harsh-raj00" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--text-primary); text-decoration: underline;">github.com/harsh-raj00</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-channel-item">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">LinkedIn Coordinate</div>
+                    <div class="channel-val">
+                      <a href="https://linkedin.com/in/harsh-raj10" target="_blank" rel="noopener noreferrer"
+                        style="color: var(--text-primary); text-decoration: underline;">linkedin.com/in/harsh-raj10</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Row -->
+            <div>
+              <div class="channel-label" style="margin-bottom: 12px;">Verified Profiles</div>
+              <div class="social-links-row">
+                <a href="https://github.com/harsh-raj00" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="GitHub Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://linkedin.com/in/harsh-raj10" target="_blank" rel="noopener noreferrer"
+                  class="social-link-btn" aria-label="LinkedIn Profile">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="mailto:harsh546raj@gmail.com" class="social-link-btn" aria-label="Email Directly">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Card (Powered by Web3Forms) -->
+          <div class="contact-form-card">
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Elena Rostova" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Professional Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. elena@venture.io" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Topic / Position</label>
+                <input type="text" id="contact-subject" class="form-input"
+                  placeholder="e.g. AI Engineering Role / Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Project Scope or Message</label>
+                <textarea id="contact-message" class="form-textarea"
+                  placeholder="Detail your operational requirements, timeline, and architectural challenges..."
+                  required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width: 100%;">
+                <span>Dispatch Transmission</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>HARSH RAJ</h3>
+          <p>Full-Stack AI Engineer &amp; Systems Architect • Bengaluru, India</p>
+        </div>
+
+        <div class="footer-clock-box">
+          <span class="live-pulse-dot"></span>
+          <span id="live-clock">Bengaluru, IN • Loading local time...</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Harsh Raj. Engineered with zero external bloat. Monochromatic aesthetic.
+        </div>
+        <div>
+          <a href="#hero" class="back-to-top-btn" aria-label="Return to top of page">
+            <span>Back to Surface</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-project-title">Architecture Breakdown</div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-dynamic-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CURRICULUM VITAE / RESUME MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-label="Curriculum Vitae Viewer">
+    <div class="modal-content" style="max-width: 860px;">
+      <div class="modal-header">
+        <div class="modal-title">Curriculum Vitae — Harsh Raj</div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button class="btn btn-secondary btn-sm" id="print-resume-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / PDF</span>
+          </button>
+          <button class="modal-close-btn" id="resume-close-btn" aria-label="Close resume modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body"
+        style="background: var(--bg-primary); font-family: var(--font-body); color: var(--text-primary); padding: 36px;">
+        <div style="border-bottom: 2px solid var(--border-strong); padding-bottom: 24px; margin-bottom: 24px;">
+          <h1
+            style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 4px;">
+            HARSH RAJ</h1>
+          <p
+            style="font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 8px;">
+            Data Science &amp; Artificial Intelligence • IIIT Dharwad</p>
+          <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">
+            IIIT Dharwad, Karnataka, India • harsh546raj@gmail.com • github.com/harsh-raj00 • linkedin.com/in/harsh-raj10
+          </p>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h2
+            style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 12px;">
+            Executive Summary
+          </h2>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
+            Full-Stack AI Engineer with hands-on production experience architecting real-time multilingual voice assistant pipelines (ASR→LLM→TTS), domain chatbots, and RAG workflows at <strong>Head Held High Foundation</strong>, alongside enterprise telemetry monitoring and anomaly detection with <strong>Trend Micro Vision One XDR</strong>. Creator of ChefMind AI, J.A.R.V.I.S. (3D WebGL), and DeepfakeGuard (biometric anti-spoofing). Proficient in Python, TypeScript, React 19, FastAPI, Groq Cloud, Gemini API, Three.js, and Docker.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h2
+            style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 12px;">
+            Work Experience
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: 18px; font-size: 0.9rem;">
+            <div>
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: 600; margin-bottom: 4px;">
+                <span>AI Intern (AI Advocacy &amp; Voice Systems) — Head Held High Foundation</span>
+                <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted);">May 2025 — Aug 2025 • Remote</span>
+              </div>
+              <ul style="padding-left: 18px; margin: 4px 0 0 0; color: var(--text-secondary); line-height: 1.55;">
+                <li>Built <strong>production-oriented AI workflows</strong> (a domain chatbot, a full RAG pipeline and a real-time multilingual voice assistant), owning the full lifecycle from problem framing through live inference and monitoring.</li>
+                <li>Developed a <strong>retrieval-augmented generation (RAG)</strong> pipeline that grounds LLM responses in domain documents, reducing unsupported answers in the chatbot.</li>
+                <li>Designed an end-to-end real-time <strong>Language ID → ASR → LLM → TTS</strong> pipeline that detects spoken language, transcribes it, generates responses using explicit language tagging, and streams synthesized audio back in real time.</li>
+                <li>Benchmarked open-source LLMs (including <strong>Gemma</strong> and <strong>Qwen</strong>) for Indic response quality and evaluated 4-bit quantized models (GGUF/ONNX/TensorRT) for edge latency reduction.</li>
+                <li>Engineered prompt and language-tag conditioning ensuring replies in native Indic languages (including low-resource languages like Sanskrit) with multi-turn conversation memory.</li>
+              </ul>
+            </div>
+            <div>
+              <div style="display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: 600; margin-bottom: 4px;">
+                <span>Cybersecurity Intern — Trend Micro AMEA</span>
+                <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted);">Jun 2025 — Jul 2025 • Remote / Dubai</span>
+              </div>
+              <ul style="padding-left: 18px; margin: 4px 0 0 0; color: var(--text-secondary); line-height: 1.55;">
+                <li>Monitored enterprise security telemetry and applied anomaly detection using <strong>Trend Micro Vision One XDR</strong> to isolate suspicious activity and separate real threats from noise.</li>
+                <li>Conducted real-time event monitoring, triage, and root-cause tracing with telemetry review as data-quality precision.</li>
+                <li>Authored structured threat reports translating complex raw telemetry findings into actionable intelligence summaries for decision-makers.</li>
+                <li>Earned the industry-recognized <strong>Trend Micro Vision One XDR Certified Professional</strong> credential.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h2
+            style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 12px;">
+            Core Technical Skills
+          </h2>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; font-size: 0.9rem;">
+            <div><strong>Languages:</strong> TypeScript, JavaScript, Python, Go, Rust, Solidity, SQL</div>
+            <div><strong>AI &amp; Machine Learning:</strong> RAG (Retrieval-Augmented Generation), Gemini API, Groq Cloud, PyTorch, TensorFlow, OpenCV, MediaPipe, ASR/TTS</div>
+            <div><strong>Frontend &amp; 3D:</strong> React 19, Three.js, GLSL, Next.js, Web Audio API, WebSockets</div>
+            <div><strong>Security &amp; Infra:</strong> Trend Micro Vision One XDR, FastAPI, Docker, Node.js, MongoDB, Redis</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h2
+            style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 12px;">
+            Featured Project Portfolio
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.9rem;">
+            <div>
+              <strong>ChefMind AI</strong> (chef-mind-ai.vercel.app): Dual-engine culinary intelligence with Groq (500
+              t/s) + Gemini Flash failover, Gemini Vision pantry detection, and bilingual Devanagari recipe generation.
+            </div>
+            <div>
+              <strong>J.A.R.V.I.S.</strong> (jarvis-frontend-uj30.onrender.com): Cinematic Iron Man assistant with 8,000
+              particle Three.js GLSL sphere, FastAPI, Gemini API, and ElevenLabs voice synthesis.
+            </div>
+            <div>
+              <strong>DeepfakeGuard</strong> (deepfakeguard-3ufd.onrender.com): 4-layer biometric anti-spoofing security
+              pipeline (SSD+ResNet, 128D FaceNet, MesoNet CNN) with 96% accuracy and 98.68% precision.
+            </div>
+            <div>
+              <strong>BookBridge</strong> (bookbridge-xh39.onrender.com): Academic textbook marketplace and StudyVault
+              with Python FastAPI, SQLAlchemy, and Docker.
+            </div>
+            <div>
+              <strong>LivspaceOne</strong> (livspaceone.onrender.com): Luxury architecture &amp; space creation
+              storefront with Node.js, Express, MongoDB, and Socket.io.
+            </div>
+            <div>
+              <strong>EthSecure Health</strong> (ethsecure-health.onrender.com): Decentralized electronic health records
+              on Ethereum with AES-256 client-side encryption and IPFS.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2
+            style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; text-transform: uppercase; border-bottom: 1px solid var(--border-subtle); padding-bottom: 6px; margin-bottom: 12px;">
+            Education &amp; Credentials
+          </h2>
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: 600;">
+            <span>Indian Institute of Information Technology Dharwad</span>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted);">Aug 2023 — May 2027 • Dharwad, India</span>
+          </div>
+          <div style="font-size: 0.95rem; color: var(--text-primary); margin-top: 4px; font-weight: 500;">
+            B.Tech in Data Science &amp; Artificial Intelligence (Minor: Cyber Security)
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; line-height: 1.5;">
+            <strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms, OOP, DBMS, Operating Systems, Computer Networks, Cloud Computing, Software Engineering
+          </div>
+          <div style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px;">
+            <strong>Professional Credential:</strong> Trend Micro Vision One XDR Certified Professional
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/anime.min.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particle-sphere.js"></script>
+  <script src="js/architecture.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
