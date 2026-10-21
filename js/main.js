@@ -376,25 +376,25 @@ document.addEventListener('DOMContentLoaded', () => {
       githubUrl: 'https://github.com/harsh-raj00/DeepfakeGuard',
       liveUrl: 'https://deepfakeguard-3ufd.onrender.com'
     },
-    'bookbridge': {
-      title: 'BookBridge — Academic Marketplace & StudyVault',
-      category: 'Full-Stack Platform',
-      overview: 'A digital textbook exchange and academic resource hub empowering students to buy, sell, and access verified lecture notes, question papers, and study materials.',
+    'lithaven': {
+      title: 'LitHaven — College Book Exchange & Study Notes Sharing Platform',
+      category: 'Full-Stack MERN Platform',
+      overview: 'A full-stack campus marketplace enabling college students to buy and sell pre-owned textbooks and share academic study notes (cheat sheets, lecture summaries, question papers) with zero commission fees.',
       architecture: [
-        'Python FastAPI backend with SQLAlchemy ORM, SQLite/PostgreSQL persistence, and CORS security middleware.',
-        'JWT token authentication for student account verification and role-based permissions.',
-        'StudyVault file sharing engine with smart category search across 9 academic disciplines.',
-        'Fully containerized Docker architecture deployed on Render cloud platform.'
+        'React 19 + Vite frontend engineered with a dual-mode theme system (Midnight Atelier & Travertine Atelier) and interactive 3D book spine viewer.',
+        'Node.js & Express.js REST API with JWT authentication, meeting-point location coordination, and rate-limiting middleware.',
+        'MongoDB / TiDB cloud persistence storing indexed book listings, condition ratings, and price discount calculations.',
+        'Integrated Study Vault with counter-tracked downloads and campus-safe direct buyer-seller negotiation messaging.'
       ],
       metrics: [
-        { label: 'Categories', value: '9 Disciplines' },
-        { label: 'Search Latency', value: '< 28ms' },
-        { label: 'Containerization', value: 'Dockerized' },
-        { label: 'Backend', value: 'FastAPI' }
+        { label: 'Commission', value: '0% Fees' },
+        { label: 'Theme Modes', value: 'Dual Atelier' },
+        { label: 'Live Preview', value: 'Real-time 3D' },
+        { label: 'Deployment', value: 'Vercel + Render' }
       ],
-      techStack: ['Python', 'FastAPI', 'SQLAlchemy', 'JWT', 'Docker', 'SQLite', 'Render'],
-      githubUrl: 'https://github.com/harsh-raj00/BookBridge',
-      liveUrl: 'https://bookbridge-xh39.onrender.com'
+      techStack: ['React 19', 'Node.js', 'Express.js', 'MongoDB', 'Vite', 'JWT', 'TailwindCSS', 'Render', 'Vercel'],
+      githubUrl: 'https://github.com/harsh-raj00/LitHaven',
+      liveUrl: 'https://lit-haven.vercel.app'
     },
     'livspaceone': {
       title: 'LivspaceOne — Luxury Architecture & Space Creation Platform',

@@ -51,11 +51,11 @@ Cinematic Iron Man AI Assistant.
 - EAR + Head pose liveness detection + MesoNet CNN deepfake artifact analysis.
 - Live: https://deepfakeguard-3ufd.onrender.com
 - Code: https://github.com/harsh-raj00/DeepfakeGuard`,
-    'projects/bookbridge.md': `# BookBridge
-Academic textbook marketplace and StudyVault.
-- Python FastAPI, SQLAlchemy, JWT authentication, Docker on Render.
-- Live: https://bookbridge-xh39.onrender.com
-- Code: https://github.com/harsh-raj00/BookBridge`,
+    'projects/lithaven.md': `# LitHaven
+Campus book exchange & study notes sharing platform with 0% commission fees.
+- React 19, Node.js, Express, MongoDB, JWT authentication, dual-mode theme engine.
+- Live: https://lit-haven.vercel.app
+- Code: https://github.com/harsh-raj00/LitHaven`,
     'projects/livspaceone.md': `# LivspaceOne
 Luxury architectural marketplace and digital space creation platform.
 - Dual systems: LuxeBuild Mart e-commerce + Design Studio booking.
@@ -148,7 +148,7 @@ projects/
   ├── chefmind.md
   ├── jarvis.md
   ├── deepfakeguard.md
-  ├── bookbridge.md
+  ├── lithaven.md
   ├── livspaceone.md
   └── ethsecure.md
 
@@ -193,9 +193,9 @@ ${getSep()}
    • 96% accuracy, 98.68% precision with Grad-CAM explainability
    • URL: https://deepfakeguard-3ufd.onrender.com
 
-4. BookBridge
-   • Academic resource exchange & StudyVault on FastAPI + Docker
-   • URL: https://bookbridge-xh39.onrender.com
+4. LitHaven
+   • Campus textbook marketplace & study notes sharing platform (MERN)
+   • URL: https://lit-haven.vercel.app
 
 5. LivspaceOne
    • Luxury interior & space creation marketplace with Socket.io concierge
