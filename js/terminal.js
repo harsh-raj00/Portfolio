@@ -39,6 +39,11 @@ Multimodal culinary intelligence platform.
 - Features: Gemini Vision pantry detection, Web Speech voice dictation, zero-latency culinary scaler.
 - Live: https://chef-mind-ai.vercel.app
 - Code: https://github.com/harsh-raj00/ChefMind-AI`,
+    'projects/lithaven.md': `# LitHaven
+Campus book exchange & study notes sharing platform with 0% commission fees.
+- React 19, Node.js, Express, MongoDB, JWT authentication, dual-mode theme engine.
+- Live: https://lit-haven.vercel.app
+- Code: https://github.com/harsh-raj00/LitHaven`,
     'projects/jarvis.md': `# J.A.R.V.I.S.
 Cinematic Iron Man AI Assistant.
 - 8,000 particle 3D WebGL holographic sphere with custom GLSL shaders.
@@ -51,11 +56,6 @@ Cinematic Iron Man AI Assistant.
 - EAR + Head pose liveness detection + MesoNet CNN deepfake artifact analysis.
 - Live: https://deepfakeguard-3ufd.onrender.com
 - Code: https://github.com/harsh-raj00/DeepfakeGuard`,
-    'projects/lithaven.md': `# LitHaven
-Campus book exchange & study notes sharing platform with 0% commission fees.
-- React 19, Node.js, Express, MongoDB, JWT authentication, dual-mode theme engine.
-- Live: https://lit-haven.vercel.app
-- Code: https://github.com/harsh-raj00/LitHaven`,
     'projects/livspaceone.md': `# LivspaceOne
 Luxury architectural marketplace and digital space creation platform.
 - Dual systems: LuxeBuild Mart e-commerce + Design Studio booking.
@@ -146,9 +146,9 @@ about.txt
 experience.txt
 projects/
   ├── chefmind.md
+  ├── lithaven.md
   ├── jarvis.md
   ├── deepfakeguard.md
-  ├── lithaven.md
   ├── livspaceone.md
   └── ethsecure.md
 
@@ -183,19 +183,19 @@ ${getSep()}
    • Multimodal pantry vision & bilingual Devanagari recipe generation
    • URL: https://chef-mind-ai.vercel.app
 
-2. J.A.R.V.I.S. (Iron Man HUD)
+2. LitHaven
+   • Campus textbook marketplace & study notes sharing platform (MERN)
+   • URL: https://lit-haven.vercel.app
+
+3. J.A.R.V.I.S. (Iron Man HUD)
    • 8K Particle WebGL holographic sphere with GLSL shaders & voice orb
    • FastAPI, Gemini API, duplex WebSockets, and ElevenLabs speech
    • URL: https://jarvis-frontend-uj30.onrender.com
 
-3. DeepfakeGuard
+4. DeepfakeGuard
    • 4-layer biometric anti-spoofing AI: SSD+ResNet, 128D FaceNet, MesoNet
    • 96% accuracy, 98.68% precision with Grad-CAM explainability
    • URL: https://deepfakeguard-3ufd.onrender.com
-
-4. LitHaven
-   • Campus textbook marketplace & study notes sharing platform (MERN)
-   • URL: https://lit-haven.vercel.app
 
 5. LivspaceOne
    • Luxury interior & space creation marketplace with Socket.io concierge
