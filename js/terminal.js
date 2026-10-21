@@ -35,7 +35,7 @@ Email: harsh546raj@gmail.com | GitHub: harsh-raj00 | LinkedIn: harsh-raj10`,
    • Coursework: Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks, Cloud Computing, Software Engineering.`,
     'projects/chefmind.md': `# ChefMind AI
 Multimodal culinary intelligence platform.
-- Dual-Engine Inference: Groq Cloud (openai/gpt-oss-120b @ 500 t/s) + Gemini Flash failover.
+- Dual-Engine Inference: Groq Cloud (openai/gpt-oss-120b ) + Gemini Flash failover.
 - Features: Gemini Vision pantry detection, Web Speech voice dictation, zero-latency culinary scaler.
 - Live: https://chef-mind-ai.vercel.app
 - Code: https://github.com/harsh-raj00/ChefMind-AI`,
@@ -134,7 +134,7 @@ Location    : Bengaluru, India (IST UTC+5:30)
                  Shell       : zsh 5.9 / Web Audio Engine
                  Terminal    : HR-Systems Monochromatic v3.0
 
-AI Engine   : Groq Cloud (500 t/s) + Gemini 1.5 Flash (RAG Pipeline)
+AI Engine   : Groq Cloud  + Gemini 1.5 Flash (RAG Pipeline)
 Primary Lang: JavaScript, Python, TypeScript, FastAPI, React 19, SQL
 Credentials : Trend Micro Vision One XDR Certified Professional
 Coursework  : DSA, OOP, DBMS, OS, Computer Networks, Cloud Computing, Software Eng.
@@ -179,7 +179,7 @@ OVERALL SCORE: 99.8 / 100 — Production Grade SLA
 [HARSH RAJ — VERIFIED PRODUCTION SYSTEMS]
 ${getSep()}
 1. ChefMind AI
-   • Dual-engine culinary intelligence with Groq (500 t/s) & Gemini Flash
+   • Dual-engine culinary intelligence with Groq  & Gemini Flash
    • Multimodal pantry vision & bilingual Devanagari recipe generation
    • URL: https://chef-mind-ai.vercel.app
 
