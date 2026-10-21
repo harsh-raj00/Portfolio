@@ -143,8 +143,20 @@ class HologramCanvas {
     }
   }
 
+  handleResize() {
+    this.initCanvasSize();
+    this.generateParticles();
+    this.buildSynapses();
+  }
+
   bindEvents() {
-    window.addEventListener('resize', () => this.initCanvasSize());
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        this.handleResize();
+      }, 120);
+    });
 
     // Mouse drag rotation
     this.canvas.addEventListener('mousedown', (e) => {
